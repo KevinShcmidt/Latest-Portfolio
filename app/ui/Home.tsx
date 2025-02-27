@@ -10,7 +10,7 @@ export default function Home() : ReactNode {
         >
           <p className="text-sm">Hello 👋 !</p>
           <p className="text-sm md:mt-1">
-            I’m <span className="font-bold text-primary">KEVIN RAKOTOVAO</span>
+            I&apos;m <span className="font-bold text-primary">KEVIN RAKOTOVAO</span>
           </p>
           <h1 className="xl:text-xl 2xl:text-4xl lg:mt-2 2xl:mt-4">
             Front-end developer and UI/UX Designer

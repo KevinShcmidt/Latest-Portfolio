@@ -53,7 +53,7 @@ export default function SkewText({
     
     // Déduplication
     return [...new Set(selectedEmojis)];
-  }, [text, customEmojis]);
+  }, [text, customEmojis, emojiThemes]);
   
   // Déterminer si la couleur commence par # ou est une valeur hexadécimale
   const isHexColor = color.startsWith("#") || /^[0-9A-Fa-f]{3,8}$/.test(color);

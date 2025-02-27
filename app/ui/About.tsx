@@ -21,8 +21,8 @@ export default function About(): JSX.Element {
             <SkewText text="good design" rotation={10} color="#2D00F7" />
           </p>
           <p className="text-center text-sm mt-8">
-            I am a caring person; I don't like seeing people struggle while
-            using what I've developed. So, I pay close attention to design and
+            I am a caring person; I don&apos;t like seeing people struggle while
+            using what I&apos;ve developed. So, I pay close attention to design and
             provide a better user experience.
           </p>
           <div className="w-full mt-10">
