@@ -41,7 +41,7 @@ export default function About(): JSX.Element {
           />
         </div>
       </div>
-      <div className="hidden absolute bottom-0 right-0 md:block w-52 h-52 bg-[#F20089] rounded-full blur-3xl"></div>
+      <div className="hidden absolute bottom-24 right-52 md:block w-52 h-52 bg-[#f2008933] rounded-full blur-3xl"></div>
     </div>
   );
 }

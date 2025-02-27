@@ -3,6 +3,7 @@ import Header from "./ui/Header";
 import Home from "./ui/Home";
 import About from "./ui/About";
 import Career from "./ui/Career";
+import Skill from "./ui/Skill";
 
 export default function Page() {
   return (
@@ -17,8 +18,11 @@ export default function Page() {
       <section id="#about" className="w-full">
         <About />
       </section>
-      <section id="##career" className="w-full">
+      <section id="#career" className="w-full">
         <Career />
+      </section>
+      <section id="#career" className="w-full">
+        <Skill />
       </section>
     </div>
   );
