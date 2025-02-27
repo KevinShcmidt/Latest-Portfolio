@@ -15,17 +15,17 @@ export default function About(): JSX.Element {
             <SkewText text="Simple" rotation={5} color="#FF9100" /> ,
             <SkewText text="easy-to-use" rotation={-5} color="#F20089" />
           </p>
-          <p className="text-xl 2xl:text-2xl flex items-center justify-center mt-6">
+          <p className="text-xl 2xl:text-2xl flex items-center justify-center mt-14">
             web & mobile application
             <span className="">with a</span>
             <SkewText text="good design" rotation={10} color="#2D00F7" />
           </p>
-          <p className="text-center text-sm mt-8">
+          <p className="text-center text-sm mt-14">
             I am a caring person; I don&apos;t like seeing people struggle while
             using what I&apos;ve developed. So, I pay close attention to design and
             provide a better user experience.
           </p>
-          <div className="w-full mt-10">
+          <div className="w-full mt-14">
             <ButtonComponent
               isPrimary={true}
               label="Download resume"

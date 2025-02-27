@@ -5,7 +5,7 @@ import Rounde from "./Rounde";
 
 export default function Career(): JSX.Element {
   return (
-    <div className="mt-10 md:mt-8 mx-6">
+    <div className="mt-10 md:mt-16 mx-6">
       <Title text="My Background" />
       <div className="w-full relative flex flex-col items-start justify-start lg:items-center">
         <div className="h-[928px] w-1 bg-white mt-16"></div>

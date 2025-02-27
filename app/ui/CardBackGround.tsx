@@ -15,7 +15,7 @@ export default function CardBackGround({ date, postTitle, logoEs, es, descriptio
   const justifyClass = `justify-${position}`;
   
   return (
-    <div className={`w-96 h-56 text-sm glass rounded-2xl flex flex-col items-start ${justifyClass} gap-2 p-4`}>
+    <div className={`w-80 lg:w-96 lg:h-56 text-[12px] lg:text-sm glass rounded-2xl flex flex-col items-start ${justifyClass} gap-2 p-4`}>
       <p className='font-semibold'>{date}</p>
       <h3 className='font-semibold text-[#7B2CBF]'>{postTitle}</h3>
       <div className="flex justify-start items-center gap-2">
