@@ -13,9 +13,33 @@
     --foreground: #ededed;
   }
 }
+[data-theme='dark'] {
+  --background: #10002B;  /* Votre couleur sombre */
+  --foreground: #EBE0FF; /* Votre couleur de texte sombre */
+}
+[data-theme='light'] {
+  --background: #EBE0FF;
+  --foreground: #10002B;
+  --primary: #7B2CBF;
+  --secondary-yellow: #FF9100;
+  --secondary-pink: #F20089;
+  --secondary-blue: #2D00F7;
+  --text-color: #1E0834;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+.custom-border {
+  border: 1px solid;
+  border-image: linear-gradient(to right, rgba(238, 187, 238, 0.1), rgba(123, 44, 191, 0.1)) 1;
+} */
+
+
+
+.glass {
+  @apply backdrop-blur-[100px] bg-textColorDark/15 shadow-[0_0_3px_rgba(238,187,238,0.7)]
 }

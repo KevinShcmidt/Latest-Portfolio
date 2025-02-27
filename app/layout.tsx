@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { poppins } from "./ui/fonts";
+import { ThemeProvider } from "next-themes";
 
-
-export const metadata: Metadata = {
+export const metadata : Metadata = {
   title: "Kevin Rakotovao | Front-end Developer web & mobile | UI&UX Designer",
   description: "Portfolio de Kevin Rakotovao - Développeur Front-end web & mobile et UI/UX Designer basé à Madagascar. Un an d'expérience dans la création d'interfaces web et mobile modernes et intuitives.",
   keywords: [
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '../../public/images/logo.png', sizes: '16x16', type: 'image/png' },
-      { url: '../../public/images/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/logo.png', sizes: '32x32', type: 'image/png' },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
@@ -69,9 +69,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins}  antialiased`}
+        className={`${poppins.className}  antialiased`}
       >
-        {children}
+         <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="dark"
+          
+        >
+         <main className="min-h-screen bg-background text-foreground">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
