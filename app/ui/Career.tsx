@@ -61,6 +61,7 @@ export default function Career(): JSX.Element {
             description="The initiation in UI/UX Design at Orange Digital Center Madagascar helped me a lot in finding my path in my career. Despite its short duration, I learned a lot there, and thanks to this program, I discovered my passion."
           />
         </div>
+        <div className="absolute rotate-90 top-[450px] bg-custom-angular-gradient blur-[70px] w-[800px] h-28"></div>
       </div>
     </div>
   );
