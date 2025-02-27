@@ -26,7 +26,7 @@ export default {
       backgroundImage: {
         "custom-gradient": "linear-gradient(90deg, #5A189A 0%, #41116F 35%, #1E0834 100%)",
         "custom-gradient-hover": "linear-gradient(90deg, #1E0834 0%, #41116F 65%, #5A189A 100%)",
-        "custom-angular-gradient": "conic-gradient(rgba(45, 0, 247, 0.2) 0% 25%, rgba(45, 0, 247, 0.3) 25% 32%, rgba(247, 37, 133, 0.1) 32% 50%, rgba(247, 37, 133, 0.5) 50% 82%, transparent 82% 100%)"
+        "custom-angular-gradient": "conic-gradient(rgba(45, 0, 247, 0.1) 0% 25%, rgba(45, 0, 247, 0.2) 25% 32%, rgba(247, 37, 133, 0.1) 32% 50%, rgba(247, 37, 133, 0.2) 50% 82%, transparent 82% 100%)"
       },
       keyframes: {
         gradientSlide: {
