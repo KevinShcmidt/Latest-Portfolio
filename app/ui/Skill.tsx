@@ -38,6 +38,7 @@ export default function Skill(): JSX.Element {
             alt="Kevin Rakotovao FRONT-END DEVELOPER UI UX Designer"
             width={400}
             height={500}
+            className="hidden md:block"
           />
           <div className="absolute z-10 top-8 w-full h-40 flex justify-between items-center">
             <div className="w-[30%] h-36 grid grid-cols-3 grid-rows-4 gap-8">
