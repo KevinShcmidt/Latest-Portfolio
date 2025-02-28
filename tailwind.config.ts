@@ -36,6 +36,7 @@ export default {
       },
       animation: {
         gradientSlide: "gradientSlide 0.5s ease-in-out",
+        'spin-slow': 'spin 8s linear infinite',
       },
      
     },

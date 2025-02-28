@@ -23,7 +23,7 @@ export default function CardBackGround({
 
   return (
     <div
-      className={`w-full sm:w-72 md:w-80 lg:w-96 h-[232px] text-[11px] sm:text-[12px] lg:text-sm glass rounded-xl sm:rounded-2xl flex flex-col items-start ${justifyClass} gap-1 sm:gap-2 p-3 sm:p-4`}
+      className={`w-full md:w-80 lg:w-96 h-[232px] text-[11px] sm:text-[12px] lg:text-sm glass rounded-xl sm:rounded-2xl flex flex-col items-start ${justifyClass} gap-1 sm:gap-2 p-3 sm:p-4`}
     >
       <p className="font-semibold text-[#E0AAFF]">{date}</p>
       <h3 className="font-semibold text-[#7B2CBF] text-sm sm:text-base">
