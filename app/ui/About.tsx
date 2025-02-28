@@ -9,9 +9,9 @@ export default function About(): JSX.Element {
     <div className="relative w-full mt-8 sm:mt-10 md:mt-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
       <Title text="About me" />
       
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 place-items-center items-center mt-10 sm:mt-12 md:mt-16">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-2 place-items-center items-center mt-10 sm:mt-12 md:mt-16">
         {/* Partie texte */}
-        <div className="text-center flex flex-col items-center justify-center max-w-md mx-auto">
+        <div className="text-center flex flex-col items-center justify-center max-w-md mx-auto ">
           <div className="flex flex-wrap items-center justify-center text-lg sm:text-xl md:text-xl lg:text-2xl">
             I like creating
             <SkewText text="Simple" rotation={5} color="#FF9100" className="my-2 md:my-0" />

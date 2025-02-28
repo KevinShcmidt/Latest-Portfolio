@@ -20,16 +20,16 @@ export default function Skill(): JSX.Element {
       <div className="absolute w-[50%] h-[50%] animate-spin-slow rotate-y-25">
     {/* Positions des icônes en orbite verticale */}
     <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
-      <Technologie iconPath="/images/icons/flutter.png" alt="Figma" />
+      <Technologie iconPath="/images/icons/flutter.png" alt="Flutter Logo" />
     </div>
     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-      <Technologie iconPath="/images/icons/laravel.png" alt="Laravel" />
+      <Technologie iconPath="/images/icons/laravel.png" alt="Laravel Logo" />
     </div>
     <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
-      <Technologie iconPath="/images/icons/dart.png" alt="Dart" />
+      <Technologie iconPath="/images/icons/dart.png" alt="Dart Logo" />
     </div>
     <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-      <Technologie iconPath="/images/icons/php.png" alt="PHP" />
+      <Technologie iconPath="/images/icons/php.png" alt="PHP Logo" />
     </div>
   </div>
         <div className="relative w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] xl:w-[400px] h-auto">
@@ -43,44 +43,44 @@ export default function Skill(): JSX.Element {
             <div className="w-[30%] h-36 grid grid-cols-3 grid-rows-4 gap-8">
               <Technologie
                 iconPath="/images/icons/html.png"
-                alt="html"
+                alt="html logo"
                 className="col-start-2 row-start-1"
               />
               <Technologie
                 iconPath="/images/icons/js.png"
-                alt="html"
+                alt="Javascript logo"
                 className="col-start-2 row-start-3"
               />
               <Technologie
                 iconPath="/images/icons/css.png"
-                alt="html"
+                alt="css logo"
                 className="col-start-1 row-start-2"
               />
               <Technologie
                 iconPath="/images/icons/ts.png"
-                alt="html"
+                alt="TypeScrpt logo"
                 className="col-start-3 row-start-2"
               />
             </div>
             <div className="w-[30%] h-36 grid grid-cols-3 grid-rows-4 gap-8">
               <Technologie
                 iconPath="/images/icons/react.png"
-                alt="html"
+                alt="React logo"
                 className="col-start-2 row-start-1"
               />
               <Technologie
                 iconPath="/images/icons/nextjs.png"
-                alt="html"
+                alt="Next Js logo"
                 className="col-start-2 row-start-3"
               />
               <Technologie
                 iconPath="/images/icons/figma.png"
-                alt="html"
+                alt="Figma Logo"
                 className="col-start-1 row-start-2"
               />
               <Technologie
                 iconPath="/images/icons/tailwind.png"
-                alt="html"
+                alt="Tailwind logo"
                 className="col-start-3 row-start-2"
               />
             </div>
