@@ -5,6 +5,8 @@ interface SkewTextProps {
   rotation: number;
   color: string; // Couleur hexadécimale ou classe Tailwind
   customEmojis?: string[]; // Émojis personnalisés optionnels
+  className?: string; // Classe supplémentaire pour la personnalisation
+  responsive?: boolean; // Option pour activer/désactiver certains comportements responsifs
 }
 
 export default function SkewText({
@@ -12,6 +14,8 @@ export default function SkewText({
   rotation,
   color,
   customEmojis,
+  className = "",
+  responsive = true,
 }: SkewTextProps): ReactNode {
   // État pour gérer l'affichage des emojis
   const [showEmojis, setShowEmojis] = useState(false);
@@ -20,7 +24,7 @@ export default function SkewText({
   const emojiThemes: Record<string, string[]> = {
     simple: ["✨", "🔍", "👌", "🧩", "💡"],
     easy: ["🙂", "👍", "🎯", "✅", "🚀"],
-    "easy-to-use": ["👆", "🔄", "📱", "💻",],
+    "easy-to-use": ["👆", "🔄", "📱", "💻"],
     design: ["🎨", "🖌️", "✏️", "📐", "🖼️"],
     good: ["👍", "💯", "⭐", "🏆", "🥇"],
     beautiful: ["✨", "💎", "🌟", "🌈", "💖"],
@@ -53,57 +57,73 @@ export default function SkewText({
     
     // Déduplication
     return [...new Set(selectedEmojis)];
-  }, [text, customEmojis, emojiThemes]);
+  }, [text, customEmojis]);
   
   // Déterminer si la couleur commence par # ou est une valeur hexadécimale
   const isHexColor = color.startsWith("#") || /^[0-9A-Fa-f]{3,8}$/.test(color);
   
-  // Style du composant
-  const style = isHexColor 
+  // Calcul des rotations selon la taille d'écran
+  const responsiveRotation = responsive 
     ? { 
-        backgroundColor: color.startsWith("#") ? color : `#${color}`,
-        transform: `rotate(${rotation}deg)`,
-        transition: "transform 0.3s ease-in-out",
-        position: "relative" as const
+        default: rotation,
+        sm: rotation * 0.75, // Réduire la rotation sur les petits écrans
+        xs: rotation * 0.5   // Réduire davantage sur très petits écrans
       }
-    : { 
-        transform: `rotate(${rotation}deg)`,
-        transition: "transform 0.3s ease-in-out",
-        position: "relative" as const
-      };
+    : { default: rotation, sm: rotation, xs: rotation };
+  
+  // Style du composant avec détection de media queries
+  const style = {
+    backgroundColor: isHexColor 
+      ? (color.startsWith("#") ? color : `#${color}`)
+      : undefined,
+    transform: `rotate(${responsiveRotation.default}deg)`,
+    transition: "transform 0.3s ease-in-out, padding 0.3s ease",
+    position: "relative" as const
+  };
   
   // Fonctions pour gérer le hover
   const handleMouseEnter = (e: React.MouseEvent<HTMLSpanElement>) => {
-    e.currentTarget.style.transform = `rotate(${-rotation}deg)`;
+    // Appliquer la rotation inverse
+    e.currentTarget.style.transform = `rotate(${-responsiveRotation.default}deg)`;
     setShowEmojis(true);
   };
   
   const handleMouseLeave = (e: React.MouseEvent<HTMLSpanElement>) => {
-    e.currentTarget.style.transform = `rotate(${rotation}deg)`;
+    // Rétablir la rotation initiale
+    e.currentTarget.style.transform = `rotate(${responsiveRotation.default}deg)`;
     setShowEmojis(false);
   };
 
   return (
     <span 
-      className={`${!isHexColor ? `bg-${color}` : ''} font-semibold mx-4 px-6 py-2 inline-block -skew-x-12`}
+      className={`
+        ${!isHexColor ? `bg-${color}` : ''} 
+        font-semibold text-white 
+        mx-2 sm:mx-3 md:mx-4 
+        px-3 py-1 sm:px-4 sm:py-1.5 md:px-6 md:py-2 
+        inline-block -skew-x-12
+        text-sm sm:text-base md:text-lg
+        ${className}
+      `}
       style={style}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {text}
       
-      {/* Conteneur pour les emojis */}
+      {/* Conteneur pour les émojis */}
       {showEmojis && (
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
           {emojis.map((emoji, index) => (
             <span 
               key={index}
-              className="absolute text-2xl animate-ping"
+              className="absolute text-lg sm:text-xl md:text-2xl animate-ping"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDuration: `${0.5 + Math.random() * 1.5}s`,
-                animationDelay: `${Math.random() * 0.5}s`
+                animationDelay: `${Math.random() * 0.5}s`,
+                opacity: 0.8
               }}
             >
               {emoji}

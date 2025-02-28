@@ -7,7 +7,7 @@ export default function Career(): JSX.Element {
   return (
     <div className="mt-10 md:mt-16 mx-6">
       <Title text="My Background" />
-      <div className="w-full relative flex flex-col items-start justify-start lg:items-center">
+      <div className="w-full relative grid grid-cols-1 place-items-start md:place-items-center">
         <div className="h-[928px] w-1 bg-white mt-16"></div>
         <div className="absolute ml-[2px] top-16">
           <Rounde />
@@ -21,7 +21,8 @@ export default function Career(): JSX.Element {
         <div className="absolute ml-[2px] top-[760px]">
           <Rounde />
         </div>
-        <div className="absolute top-12 ml-8 lg:ml-0 lg:right-60 2xl:right-32">
+        <div className="absolute top-6 grid grid-cols-2 grid-rows-4 gap-x-12 p-6">
+          <div className="col-start-1 md:col-start-2 row-start-1 ">
           <CardBackGround
             date="JAN 2025 - NOW"
             position="start"
@@ -30,8 +31,8 @@ export default function Career(): JSX.Element {
             es="Groupe VISEO"
             description="As a Front-End Developer at VISEO Group, I was responsible for designing intuitive UI/UX mockups and developing web and mobile applications."
           />
-        </div>
-        <div className="absolute top-[280px] ml-8 lg:ml-0 lg:left-60 2xl:left-32">
+          </div>
+          <div className="col-start-1 row-start-2 ">
           <CardBackGround
             date="JUL 2024 - DEC 2024"
             position="start"
@@ -40,8 +41,8 @@ export default function Career(): JSX.Element {
             es="Groupe VISEO"
             description="As a Front-End Developer at VISEO Group, I was responsible for designing intuitive UI/UX mockups and developing web applications."
           />
-        </div>
-        <div className="absolute top-[512px] ml-8 lg:ml-0 lg:right-60 2xl:right-32">
+          </div>
+          <div className="col-start-1 md:col-start-2 row-start-3 ">
           <CardBackGround
             date="2023"
             position="start"
@@ -50,8 +51,8 @@ export default function Career(): JSX.Element {
             es="University GSI Madagascar"
             description="Graduation with a Bachelor&apos;s degree in Management Information Systems"
           />
-        </div>
-        <div className="absolute top-[744px] ml-8 lg:ml-0 lg:left-60 2xl:left-32">
+          </div>
+          <div className="col-start-1 row-start-4 ">
           <CardBackGround
             date="(1 Week in 2023)"
             position="start"
@@ -60,7 +61,9 @@ export default function Career(): JSX.Element {
             es="Orange Digital Center Madagascar"
             description="The initiation in UI/UX Design at Orange Digital Center Madagascar helped me a lot in finding my path in my career. Despite its short duration, I learned a lot there, and thanks to this program, I discovered my passion."
           />
+          </div>
         </div>
+        
         <div className="absolute rotate-90 top-[450px] bg-custom-angular-gradient blur-[70px] w-[800px] h-28"></div>
       </div>
     </div>
