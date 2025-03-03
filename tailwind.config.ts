@@ -33,10 +33,15 @@ export default {
           "0%": { backgroundPosition: "100% 0" },
           "100%": { backgroundPosition: "0% 0" },
         },
+        fadeIn: {
+          '0%': { opacity : '0' },
+          '100%': { opacity : '1' },
+        },
       },
       animation: {
         gradientSlide: "gradientSlide 0.5s ease-in-out",
         'spin-slow': 'spin 8s linear infinite',
+        'fadeIn': 'fadeIn 0.3s ease-in-out',
       },
      
     },

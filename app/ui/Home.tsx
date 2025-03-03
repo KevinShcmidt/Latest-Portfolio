@@ -2,10 +2,11 @@
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
 import ButtonComponent from './ButtonComponent';
+import { ChevronDown } from 'lucide-react';
 
 export default function Home(): ReactNode {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
+    <div className="relative w-full flex flex-col items-center justify-center min-h-screen mt-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
       <div className="flex flex-col items-center z-10">
         <p className="text-sm sm:text-base">Hello 👋 !</p>
         <p className="text-sm sm:text-base md:mt-1">
@@ -29,6 +30,7 @@ export default function Home(): ReactNode {
           <ButtonComponent
             isPrimary={true}
             onClick={() => null}
+            icon={ChevronDown}
             label="Learn about me"
           />
         </div>

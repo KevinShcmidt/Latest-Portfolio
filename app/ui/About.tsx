@@ -3,6 +3,7 @@ import React, { JSX } from "react";
 import ButtonComponent from "./ButtonComponent";
 import SkewText from "./SkewText";
 import Title from "./Title";
+import { ArrowDownToLine } from "lucide-react";
 
 export default function About(): JSX.Element {
   return (
@@ -31,10 +32,11 @@ export default function About(): JSX.Element {
             provide a better user experience.
           </p>
           
-          <div className="w-full mt-8 sm:mt-10 md:mt-14">
+          <div className="w-full flex items-center justify-center mt-8 sm:mt-10 md:mt-14">
             <ButtonComponent
               isPrimary={true}
               label="Download resume"
+              icon={ArrowDownToLine}
               onClick={() => null}
             />
           </div>
