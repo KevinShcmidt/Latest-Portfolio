@@ -54,7 +54,7 @@ export default function Work(): JSX.Element {
         },
       ];
   return (
-    <div className="mt-10 md:mt-16 mx-4 md:mx-16 lg:mx-40">
+    <div className="relative mt-10 md:mt-16 mx-4 md:mx-16 lg:mx-40">
       <Title text="My latest projects" />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
         {
@@ -62,6 +62,7 @@ export default function Work(): JSX.Element {
                 <CardWork key={item.id} imagePath={item.image} title={item.title} description={item.description} buttonAction={item.buttonAction} /> ))
         }
       </div>
+      <div className="absolute top-[450px] bg-custom-angular-gradient blur-[70px] w-[800px] h-28"></div>
     </div>
   );
 }

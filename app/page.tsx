@@ -5,6 +5,7 @@ import About from "./ui/About";
 import Career from "./ui/Career";
 import Skill from "./ui/Skill";
 import Work from "./ui/Work";
+import Contact from "./ui/Contact";
 
 export default function Page() {
   return (
@@ -27,6 +28,9 @@ export default function Page() {
       </section>
       <section id="#work" className="w-full">
         <Work />
+      </section>
+      <section id="#contact" className="w-full">
+        <Contact />
       </section>
     </div>
   );

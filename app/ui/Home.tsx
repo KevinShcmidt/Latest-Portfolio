@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
         </div>
       </div>
       
-      <div className="absolute bottom-0 bg-custom-angular-gradient blur-[70px] w-full h-28 sm:h-32 md:h-40"></div>
+      <div className="absolute bg-custom-angular-gradient blur-[70px] w-full h-28 sm:h-32 md:h-40"></div>
     </div>
   );
 }
