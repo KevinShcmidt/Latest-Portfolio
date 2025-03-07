@@ -6,6 +6,7 @@ import ButtonComponent from "./ButtonComponent";
 import { ChevronDown } from "lucide-react";
 
 export default function Home(): ReactNode {
+
   return (
     <div className="relative w-full flex flex-col items-center justify-center min-h-screen mt-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
       <div className="flex flex-col items-center z-10">

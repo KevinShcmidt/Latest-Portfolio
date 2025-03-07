@@ -6,6 +6,23 @@ import Title from "./Title";
 import { ArrowDownToLine } from "lucide-react";
 import * as motion from "motion/react-client";
 
+const handleDownload = () => {
+  const fileUrl = '/cv.pdf'; // ic
+  
+  // Créer un lien temporaire
+  const link = document.createElement('a');
+  link.href = fileUrl;
+  link.download = 'Kevin RAKOTOVAO.pdf'; // Nom du fichier à télécharger
+  document.body.appendChild(link);
+  
+  // Simuler un clic sur le lien
+  link.click();
+  
+  // Nettoyer et supprimer le lien
+  document.body.removeChild(link);
+};
+
+
 // Composant d'enveloppe animée pour SkewText
 const AnimatedSkewWrapper: React.FC<{ children: React.ReactNode; delay?: number; className?: string }> = ({ children, delay = 0, className = "" }) => {
   return (
@@ -91,7 +108,7 @@ export default function About(): JSX.Element {
             transition={{ delay: 1.5, duration: 0.5 }}
             className="w-full flex items-center justify-center mt-8 sm:mt-10 md:mt-14"
           >
-            <ButtonComponent isPrimary={true} label="Download resume" icon={ArrowDownToLine} onClick={() => null} />
+            <ButtonComponent isPrimary={true} label="Download resume" icon={ArrowDownToLine} onClick={() => handleDownload()} />
           </motion.div>
         </motion.div>
 
