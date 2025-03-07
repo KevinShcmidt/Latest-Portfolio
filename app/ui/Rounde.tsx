@@ -6,9 +6,8 @@ export default function Rounde() : JSX.Element {
         <div className="absolute w-8 h-8 bg-white rounded-full">
 
         </div>
-        <div className="absolute w-4 h-4 bg-primary rounded-full">
-
-        </div>
+        <div className="absolute w-4 h-4 bg-primary animate-[spin_5s_linear_infinite]" style={{ clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" }}>
+</div>
     </div>
   )
 }
