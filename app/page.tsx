@@ -12,24 +12,24 @@ export default function Page() {
     <div className="w-full flex flex-col">
       <Header />
       <section
-        id="#home"
+        id="home"
         className="relative w-full flex flex-col items-center justify-center h-screen"
       >
         <Home />
       </section>
-      <section id="#about" className="w-full">
+      <section id="about" className="w-full">
         <About />
       </section>
-      <section id="#career" className="w-full">
+      <section id="career" className="w-full">
         <Career />
       </section>
-      <section id="#career" className="w-full">
+      <section id="career" className="w-full">
         <Skill />
       </section>
-      <section id="#work" className="w-full">
+      <section id="work" className="w-full">
         <Work />
       </section>
-      <section id="#contact" className="w-full">
+      <section id="contact" className="w-full">
         <Contact />
       </section>
     </div>

@@ -12,6 +12,7 @@ export default function Header(): ReactNode {
   
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
   // Effet pour détecter le défilement
   useEffect(() => {
@@ -35,9 +36,15 @@ export default function Header(): ReactNode {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Fonction pour gérer le défilement fluide
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setActiveSection("#home");
+  };
+
   return (
     <header 
-      id="home" 
       className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between transition-all duration-300 ease-in-out
         ${scrolled 
           ? "md:px-28 px-3 py-2 bg-opacity-85 backdrop-blur-3xl shadow-md" 
@@ -46,7 +53,12 @@ export default function Header(): ReactNode {
         ${theme === "light" ? "bg-white" : "bg-[#10002B]"}`
       }
     >
-      <div className={`relative w-[50px] h-8 transition-all duration-300 ${scrolled ? "scale-90" : ""}`}>
+      <a 
+        href="#home" 
+        onClick={handleLogoClick}
+        className={`relative w-[50px] h-8 transition-all duration-300 ${scrolled ? "scale-90" : ""}`}
+        aria-label="Go to Home"
+      >
         <Image
           src={logoSrc}
           alt="Kevin Rakotovao | Front-end developer & UI/UX Designer"
@@ -57,7 +69,7 @@ export default function Header(): ReactNode {
             objectFit: "cover",
           }}
         />
-      </div>
+      </a>
 
       {/* Navigation pour les écrans moyens et grands */}
       <NavBar scrolled={scrolled} />
