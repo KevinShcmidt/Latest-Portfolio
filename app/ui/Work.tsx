@@ -82,7 +82,7 @@ export default function Work(): JSX.Element {
       </div>
       {
         isActiveModal && (
-          <Modals />
+          <Modals onClose={() => setIsActiveModal(!isActiveModal)} />
         )
       }
       <div className="absolute top-[450px] bg-custom-angular-gradient blur-[70px] w-[800px] h-28"></div>
