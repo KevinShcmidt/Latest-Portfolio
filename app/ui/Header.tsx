@@ -12,11 +12,11 @@ export default function Header(): ReactNode {
   
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // Suppression de activeSection puisque vous ne l'utilisez pas dans ce composant
+  
 
   // Effet pour détecter le défilement
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = ()  => {
       if (window.scrollY > 10) {
         setScrolled(true);
       } else {

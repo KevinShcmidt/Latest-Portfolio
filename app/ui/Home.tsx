@@ -4,6 +4,7 @@ import * as motion from "motion/react-client";
 import React, { ReactNode } from "react";
 import ButtonComponent from "./ButtonComponent";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function Home(): ReactNode {
 
@@ -43,14 +44,14 @@ export default function Home(): ReactNode {
           />
         </motion.div>
 
-        <div className="mt-4 sm:mt-6 z-10">
+        <Link href="#about" className="mt-4 sm:mt-6 z-10">
           <ButtonComponent
             isPrimary={true}
             onClick={() => null}
             icon={ChevronDown}
             label="Learn about me"
           />
-        </div>
+        </Link>
       </div>
 
       <div className="absolute bg-custom-angular-gradient blur-[70px] w-full h-28 sm:h-32 md:h-40"></div>
