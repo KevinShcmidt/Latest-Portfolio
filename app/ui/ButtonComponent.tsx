@@ -25,7 +25,7 @@ export default function ButtonComponent({
         transition-all duration-500
         hover:bg-custom-gradient-hover
         hover:animate-gradientSlide
-        rounded-lg 
+        rounded-full 
         text-textColorDark 
         text-sm 
         font-medium

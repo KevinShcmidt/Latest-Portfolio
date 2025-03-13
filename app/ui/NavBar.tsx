@@ -92,7 +92,7 @@ export default function NavBar({ mobile = false, scrolled = false, onItemClick }
                 {label}
               </a>
               <span
-                className={`absolute left-0 bottom-0 w-full h-[2px] bg-primary transition-transform duration-300 ease-in-out ${isActive ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"}`}
+                className={`absolute left-0 bottom-0 w-full h-[3px] bg-primary rounded-full transition-transform duration-300 ease-in-out ${isActive ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"}`}
               />
             </li>
           );

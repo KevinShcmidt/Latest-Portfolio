@@ -11,7 +11,7 @@ export function ChangeMode() {
   useEffect(() => setMounted(true), []);
 
   // Fonction pour gérer le défilement fluide vers la section contact
-  const handleContactClick = (e: { preventDefault: () => void; }) => {
+  const handleContactClick = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -23,26 +23,45 @@ export function ChangeMode() {
 
   return (
     <div className="flex items-center gap-4">
-      <a 
-        href="#contact" 
+      <a
+        href="#contact"
         onClick={handleContactClick}
-        className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-500 rounded-lg transition-all hover:bg-primary hover:text-white hover:border-primary"
+        className="flex items-center justify-center gap-2 p-2 border rounded-full transition-all hover:bg-primary hover:text-white hover:border-primary"
         aria-label="Contact me"
       >
-        Contact me <span><Phone size={16} /></span>
+        <span>
+          <Phone size={16} />
+        </span>
       </a>
 
-      <button
+      {/* Toggle Switch */}
+      <div
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-        className="p-2 rounded-lg bg-gray-800 dark:bg-gray-200 transition-all"
+        className="relative z-10 w-12 h-6 rounded-full bg-primary cursor-pointer transition-all backdrop-blur-sm"
         aria-label="Toggle Dark Mode"
       >
-        {resolvedTheme === "dark" ? (
-          <Moon color="#f72585" size={18} />
-        ) : (
-          <Sun color="#ffd500" size={18} />
-        )}
-      </button>
+        
+        {/* Toggle Knob */}
+        <div
+          className="relative z-10 w-12 h-6 rounded-full cursor-pointer transition-all backdrop-blur-2xl"
+          aria-label="Toggle Dark Mode"
+        >
+          {/* Toggle Knob - Overflowing */}
+          <div
+            className={`absolute z-10 w-8 h-8 rounded-full bg-primary dark:bg-gray-900 shadow-md transform transition-transform ${
+              resolvedTheme === "dark" ? "translate-x-5" : "translate-x-0"
+            } top-1/2 -translate-y-1/2 flex items-center justify-center`}
+          >
+            {/* Icons */}
+            {resolvedTheme === "dark" ? (
+              <Moon className="w-5 h-5 text-pink-500" />
+            ) : (
+              <Sun className="w-5 h-5 text-yellow-500" />
+            )}
+          </div>
+        </div>
+        <div className="absolute z-0 w-14 h-3 bg-secondaryBlue blur-[20px] -top-1 -left-1"></div>
+      </div>
     </div>
   );
 }
