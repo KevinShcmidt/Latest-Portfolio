@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { JSX } from "react";
 interface CardWorkProps {
   imagePath: string;
   title: string;
   description: string;
+  link: string;
   buttonAction: () => void;
 }
 
@@ -11,6 +13,7 @@ export default function CardWork({
   imagePath,
   title,
   description,
+  link,
   buttonAction,
 }: CardWorkProps): JSX.Element {
   return (
@@ -25,13 +28,26 @@ export default function CardWork({
       </div>
       <div className="p-4 flex flex-col flex-1 w-full">
         <h2 className="text-base font-bold">{title}</h2>
-        <p className="text-sm text-start mt-4 font-normal flex-1 overflow-y-auto">{description}</p>
-        <button
-          onClick={buttonAction}
-          className="w-full text-end mt-4 text-base text-primary font-bold"
-        >
-          View project
-        </button>
+        <p className="text-sm text-start mt-4 font-normal flex-1 overflow-y-auto">
+          {description}
+        </p>
+        {link != null ? (
+          <Link href={link} target="_blank" >
+            <button
+              onClick={buttonAction}
+              className="w-full text-end mt-4 text-base text-primary font-bold"
+            >
+              View project
+            </button>
+          </Link>
+        ) : (
+          <button
+            onClick={buttonAction}
+            className="w-full text-end mt-4 text-base text-primary font-bold"
+          >
+            View project
+          </button>
+        )}
       </div>
     </div>
   );

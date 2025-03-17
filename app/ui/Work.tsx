@@ -6,6 +6,12 @@ import Modals from "./Modals";
 
 export default function Work(): JSX.Element {
   const [isActiveModal, setIsActiveModal] = React.useState(false);
+  const [selectedProject, setSelectedProject] = React.useState<{
+    title: string;
+    description: string;
+    images: string[];
+  } | null>(null);
+
   const WorkItems = [
     {
       id: 1,
@@ -13,8 +19,14 @@ export default function Work(): JSX.Element {
       title: "Pride",
       description:
         "A mockup for a music platform that I designed with Figma, highlighting design trends adapted to user personas.",
+      link: "https://www.figma.com/proto/uPR9ohmQGxSh3GteN8rj3b/Challenge-Daily-UI?node-id=282-23",
       buttonAction: () => {
-        setIsActiveModal(!isActiveModal);
+        null;
+      },
+      modalContent: {
+        title: "Pride",
+        description: "A mockup for a music platform that I designed with Figma, highlighting design trends adapted to user personas.",
+        images: ["/images/CardImage/pride.png"],
       },
     },
     {
@@ -23,7 +35,15 @@ export default function Work(): JSX.Element {
       title: "Green Future",
       description:
         "A landing page mockup for a company called Green Future, which focuses on green energy.",
-      buttonAction: () => {setIsActiveModal(!isActiveModal);},
+      link: "https://www.figma.com/proto/uPR9ohmQGxSh3GteN8rj3b/Challenge-Daily-UI?node-id=282-15&t=z7bTlmOsbQKllSok-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=282%3A15",
+      buttonAction: () => {
+        null;
+      },
+      modalContent: {
+        title: "Green Future",
+        description: "A landing page mockup for a company called Green Future, which focuses on green energy.",
+        images: ["/images/CardImage/energie.png"],
+      },
     },
     {
       id: 3,
@@ -31,7 +51,15 @@ export default function Work(): JSX.Element {
       title: "Good Vibe",
       description:
         "A mobile app mockup for a platform that allows users to listen to music.",
-      buttonAction: () => {setIsActiveModal(!isActiveModal);},
+      link: "https://www.figma.com/proto/uPR9ohmQGxSh3GteN8rj3b/Challenge-Daily-UI?node-id=122-123&t=z7bTlmOsbQKllSok-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=121%3A117&show-proto-sidebar=1",
+      buttonAction: () => {
+        null;
+      },
+      modalContent: {
+        title: "Good Vibe",
+        description: "A mobile app mockup for a platform that allows users to listen to music.",
+        images: ["/images/CardImage/goodVibe.png"],
+      },
     },
     {
       id: 4,
@@ -39,7 +67,15 @@ export default function Work(): JSX.Element {
       title: "Chargeo EV",
       description:
         "An application that allows users to find available electric vehicle chargers and recharge their EV.",
-      buttonAction: () => {setIsActiveModal(!isActiveModal);},
+      link: null,
+      buttonAction: () => {
+        setIsActiveModal(!isActiveModal);
+        setSelectedProject({
+          title: "Chargeo EV",
+          description: "An application that allows users to find available electric vehicle chargers and recharge their EV. Technologies used : Flutter, figma",
+          images: ["/images/CardImage/chargeoEv.png"],
+        });
+      },
     },
     {
       id: 5,
@@ -47,7 +83,15 @@ export default function Work(): JSX.Element {
       title: "Chargeo EV Dashboard",
       description:
         "Frontend of the Chargeo EV mobile application dashboard, developed with React JS.",
-      buttonAction: () => {setIsActiveModal(!isActiveModal);},
+      link: null,
+      buttonAction: () => {
+        setIsActiveModal(!isActiveModal);
+        setSelectedProject({
+          title: "Chargeo EV Dashboard",
+          description: "Frontend of the Chargeo EV mobile application dashboard, developed with React JS. \n Technologies used: React JS, React hook form, TanStack Query, Rechart , Tailwind CSS, and Figma.", 
+          images: ["/images/CardImage/elcdis.png", "/images/CardImage/elcdis.png", "/images/CardImage/elcdis.png"],
+        });
+      },
     },
     {
       id: 6,
@@ -55,7 +99,15 @@ export default function Work(): JSX.Element {
       title: "E-Voyage",
       description:
         "The biggest project I've developed since learning to code: a web app for booking seats on land trips.",
-      buttonAction: () => {setIsActiveModal(!isActiveModal);},
+      link: null,
+      buttonAction: () => {
+        setIsActiveModal(!isActiveModal);
+        setSelectedProject({
+          title: "E-Voyage",
+          description: "The biggest project I've developed since learning to code: a web app for booking seats on land trips. Technologies used : Laravel, JavaScript",
+          images: ["/images/CardImage/evoyage.png"],
+        });
+      },
     },
   ];
 
@@ -75,16 +127,20 @@ export default function Work(): JSX.Element {
               imagePath={item.image}
               title={item.title}
               description={item.description}
+              link={item.link}
               buttonAction={item.buttonAction}
             />
           </motion.div>
         ))}
       </div>
-      {
-        isActiveModal && (
-          <Modals onClose={() => setIsActiveModal(!isActiveModal)} />
-        )
-      }
+      {isActiveModal && selectedProject && (
+        <Modals
+          onClose={() => setIsActiveModal(!isActiveModal)}
+          title={selectedProject.title}
+          description={selectedProject.description}
+          images={selectedProject.images}
+        />
+      )}
       <div className="absolute top-[450px] bg-custom-angular-gradient blur-[70px] w-[800px] h-28"></div>
     </div>
   );

@@ -2,15 +2,15 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 
-export default function Modals({ onClose }: { onClose: () => void }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
+interface ModalsProps {
+  onClose: () => void;
+  title: string;
+  description: string;
+  images: string[];
+}
 
-  // Example images for the slider
-  const images = [
-    "/images/CardImage/chargeoEv.png",
-    "/images/CardImage/elcdis.png",
-    "/images/CardImage/energie.png",
-  ];
+export default function Modals({ onClose, title, description, images }: ModalsProps) {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -66,17 +66,8 @@ export default function Modals({ onClose }: { onClose: () => void }) {
 
         {/* Content Section */}
         <div className="p-6">
-          <h2 className="text-2xl font-bold text-gray-800">Kevin Rakotovao</h2>
-          <p className="text-gray-600 mt-2">
-            Front-end Developer and UI/UX Designer
-          </p>
-          <p className="text-gray-600 mt-4">
-            I am a front-end developer and UI/UX Designer based in Antananarivo,
-            Madagascar. I am passionate about creating beautiful and functional
-            websites and applications. I have experience in developing websites
-            and applications using modern technologies such as React, Next.js,
-            and Tailwind CSS.
-          </p>
+          <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+          <p className="text-gray-600 mt-2">{description}</p>
         </div>
       </div>
     </div>
