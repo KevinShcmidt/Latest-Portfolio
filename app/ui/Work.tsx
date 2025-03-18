@@ -67,7 +67,7 @@ export default function Work(): JSX.Element {
       title: "Chargeo EV",
       description:
         "An application that allows users to find available electric vehicle chargers and recharge their EV.",
-      link: null,
+      link: "",
       buttonAction: () => {
         setIsActiveModal(!isActiveModal);
         setSelectedProject({
@@ -83,7 +83,7 @@ export default function Work(): JSX.Element {
       title: "Chargeo EV Dashboard",
       description:
         "Frontend of the Chargeo EV mobile application dashboard, developed with React JS.",
-      link: null,
+      link: "",
       buttonAction: () => {
         setIsActiveModal(!isActiveModal);
         setSelectedProject({
@@ -99,7 +99,7 @@ export default function Work(): JSX.Element {
       title: "E-Voyage",
       description:
         "The biggest project I've developed since learning to code: a web app for booking seats on land trips.",
-      link: null,
+      link: "",
       buttonAction: () => {
         setIsActiveModal(!isActiveModal);
         setSelectedProject({
