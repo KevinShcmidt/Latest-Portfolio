@@ -19,7 +19,7 @@ export default function Work(): JSX.Element {
       title: "Pride",
       description:
         "A mockup for a music platform that I designed with Figma, highlighting design trends adapted to user personas.",
-      link: "https://www.figma.com/proto/uPR9ohmQGxSh3GteN8rj3b/Challenge-Daily-UI?node-id=282-23",
+      link: "https://www.figma.com/proto/uPR9ohmQGxSh3GteN8rj3b/Challenge-Daily-UI?node-id=202-250&t=RacRrbuy2pHh0ixO-0&scaling=min-zoom&content-scaling=fixed&page-id=197%3A2",
       buttonAction: () => {
         null;
       },
@@ -51,7 +51,7 @@ export default function Work(): JSX.Element {
       title: "Good Vibe",
       description:
         "A mobile app mockup for a platform that allows users to listen to music.",
-      link: "https://www.figma.com/proto/uPR9ohmQGxSh3GteN8rj3b/Challenge-Daily-UI?node-id=122-123&t=z7bTlmOsbQKllSok-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=121%3A117&show-proto-sidebar=1",
+      link: "https://www.figma.com/proto/uPR9ohmQGxSh3GteN8rj3b/Challenge-Daily-UI?node-id=135-12&t=DRf8jKl4R6LfSAKS-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=121%3A117&show-proto-sidebar=1",
       buttonAction: () => {
         null;
       },

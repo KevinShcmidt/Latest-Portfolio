@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { JSX } from "react";
+
 interface CardWorkProps {
   imagePath: string;
   title: string;
@@ -31,12 +32,9 @@ export default function CardWork({
         <p className="text-sm text-start mt-4 font-normal flex-1 overflow-y-auto">
           {description}
         </p>
-        {link != null ? (
-          <Link href={link} target="_blank" >
-            <button
-              onClick={buttonAction}
-              className="w-full text-end mt-4 text-base text-primary font-bold"
-            >
+        {link && link.trim() !== "" ? (
+          <Link href={link} target="_blank">
+            <button className="w-full text-end mt-4 text-base text-primary font-bold">
               View project
             </button>
           </Link>
