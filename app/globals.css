@@ -41,5 +41,72 @@ body {
 
 
 .glass {
-  @apply backdrop-blur-[100px] bg-textColorDark/15 shadow-[0_0_3px_rgba(238,187,238,0.7)]
+  @apply backdrop-blur-[100px] bg-white shadow-[0_0_3px_rgba(238,187,238,0.7)];
+}
+
+[data-theme="dark"] .glass {
+  @apply bg-textColorDark/15;
+}
+
+/* Ajoutez cette classe CSS dans votre fichier global */
+.form-field {
+  @apply relative rounded-xl overflow-hidden;
+}
+
+.form-field::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #5A189A, #EBE0FF);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.form-field::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: #0E002B;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* Mode light : juste une bordure */
+[data-theme="light"] .form-field::before {
+  background: linear-gradient(to right, #5A189A, #EBE0FF);
+}
+
+[data-theme="light"] .form-field::after {
+  background: white; /* Fond blanc en mode light */
+}
+
+.form-field input,
+.form-field textarea {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  outline: none;
+}
+
+/* Couleurs du texte selon le thème */
+[data-theme="dark"] .form-field input,
+[data-theme="dark"] .form-field textarea {
+  color: white;
+}
+
+[data-theme="dark"] .form-field input::placeholder,
+[data-theme="dark"] .form-field textarea::placeholder {
+  color: #c084fc; /* purple-300 */
+}
+
+[data-theme="light"] .form-field input,
+[data-theme="light"] .form-field textarea {
+  color: #1f2937; /* gray-800 */
+}
+
+[data-theme="light"] .form-field input::placeholder,
+[data-theme="light"] .form-field textarea::placeholder {
+  color: #6b7280; /* gray-500 */
 }
