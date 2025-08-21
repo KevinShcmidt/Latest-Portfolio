@@ -9,8 +9,8 @@ import Link from "next/link";
 export default function Home(): ReactNode {
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center min-h-screen mt-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
-      <div className="flex flex-col items-center z-10">
+    <div className="w-full flex flex-col items-center justify-center min-h-screen mt-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
+      <div className="w-full flex flex-col items-center z-10">
         <motion.div initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{

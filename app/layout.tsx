@@ -69,16 +69,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className}  antialiased`}
+        className={`${poppins.className} antialiased`}
       >
          <ThemeProvider
           attribute="data-theme"
           defaultTheme="dark"
           
         >
-         <main className="min-h-screen bg-background text-foreground">
+         <main className="w-full min-h-screen bg-background text-foreground">
             {children}
-          </main>
+        </main>
         </ThemeProvider>
       </body>
     </html>
