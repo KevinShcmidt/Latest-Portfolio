@@ -20,7 +20,7 @@ export default function Career(): JSX.Element {
     <div className="mt-10 md:mt-16 mx-6">
       <Title text="My Background" />
       <div className="w-full relative grid grid-cols-1 place-items-start md:place-items-center">
-        <div className="h-[928px] w-1 bg-white mt-16"></div>
+        <div className="h-[928px] w-1 bg-[#14213d] mt-16"></div>
         <div className="absolute ml-[2px] top-16"><Rounde /></div>
         <div className="absolute ml-[2px] top-[304px] md:top-[296px]"><Rounde /></div>
         <div className="absolute ml-[2px] top-[536px] md:top-[528px]"><Rounde /></div>

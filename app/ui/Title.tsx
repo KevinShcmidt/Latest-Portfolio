@@ -2,6 +2,6 @@ import React, { JSX } from 'react'
 
 export default function Title({ text  } : { text : string }) : JSX.Element {
   return (
-    <h2 className="text-center underline underline-offset-4">{text}</h2>
+    <h2 className="text-[#14213d] text-center underline underline-offset-4">{text}</h2>
   )
 }

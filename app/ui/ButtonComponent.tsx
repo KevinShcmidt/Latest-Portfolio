@@ -21,14 +21,15 @@ export default function ButtonComponent({
       className={`
         flex items-center gap-2 justify-center
         ${isPrimary ? "px-8 py-4" : "px-6 py-3"}
-        bg-custom-gradient 
+        bg-primary 
+        hover:bg-[#E0A002]
         transition-all duration-500
         hover:bg-custom-gradient-hover
         hover:animate-gradientSlide
         rounded-full 
-        text-textColorDark 
-        text-sm 
-        font-medium
+        text-white 
+        text-normal 
+        font-bold
         ${className}
       `}
       onClick={onClick}

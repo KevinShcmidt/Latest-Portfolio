@@ -44,7 +44,7 @@ const AnimatedSkewWrapper: React.FC<{ children: React.ReactNode; delay?: number;
 
 export default function About(): JSX.Element {
   return (
-    <div className="relative w-full mt-8 sm:mt-10 md:mt-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
+    <div className="relative text-[#14213d]  bg-[#e5e5e5]/50 w-full py-16 sm:mt-10 md:mt-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40">
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -64,7 +64,7 @@ export default function About(): JSX.Element {
           }}
           className="text-center flex flex-col items-center justify-center max-w-md mx-auto"
         >
-          <div className="flex flex-wrap items-center justify-center text-lg sm:text-xl md:text-xl lg:text-2xl">
+          <div className="flex flex-wrap text-[#14213d] items-center justify-center text-lg sm:text-xl md:text-xl lg:text-2xl">
             <motion.span whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3, duration: 0.5 }}>
               I like creating
             </motion.span>
@@ -125,19 +125,18 @@ export default function About(): JSX.Element {
             scale: 1.05,
             transition: { duration: 0.3 },
           }}
-          className="relative mt-8 md:mt-0 w-48 h-[320px] sm:w-52 sm:h-[360px] md:w-56 md:h-[400px] lg:w-60 lg:h-[440px]"
+          className="relative mt-8 md:mt-0 w-[120px] h-64 sm:w-[150px] sm:h-80 lg:w-[250px] lg:h-[350px] xl:w-[300px] xl:h-[375px] 2xl:w-[350px] 2xl:h-[650px]"
         >
-          <Image src="/images/yes.png" alt="Kevin Rakotovao about me" fill={true} className="object-contain" sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 240px" />
+         <Image
+  src="/images/yes.png"
+  alt="Kevin Rakotovao about me"
+  fill={true}
+  className="object-contain"
+  sizes="(max-width: 640px) 120px, (max-width: 768px) 150px, (max-width: 1024px) 250px, (max-width: 1280px) 300px, 350px"
+  quality={100}
+/>
         </motion.div>
       </div>
-
-      {/* Élément décoratif */}
-      <motion.div
-        whileInView={{ opacity: [0, 0.3, 0.7], scale: [0.5, 1.2, 1] }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.5, delay: 1 }}
-        className="absolute bottom-0 md:bottom-12 lg:bottom-24 right-0 md:right-24 lg:right-52 w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 bg-[#f2008933] rounded-full blur-3xl opacity-70 md:opacity-100"
-      />
     </div>
   );
 }

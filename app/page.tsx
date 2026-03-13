@@ -12,9 +12,9 @@ export default function Page() {
     <div className="w-full flex flex-col">
       <Header />
       <section
-        id="home"
-        className="relative w-full flex flex-col items-center justify-center h-screen"
-      >
+  id="home"
+  className=""
+>
         <Home />
       </section>
       <section id="about" className="w-full">

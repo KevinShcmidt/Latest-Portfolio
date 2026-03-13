@@ -18,12 +18,12 @@ export default function Home(): ReactNode {
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
             }} className="w-full text-center">
-        <p className="text-sm sm:text-base">Hello 👋 !</p>
-        <p className="text-sm sm:text-base md:mt-1">
+        <p className="text-[#14213d] text-sm sm:text-base">Hello 👋 !</p>
+        <p className="text-[#14213d] text-sm sm:text-base md:mt-1">
           I&apos;m{" "}
           <span className="font-bold text-primary">KEVIN RAKOTOVAO</span>
         </p>
-        <h1 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-center mt-1 lg:mt-2 2xl:mt-4">
+        <h1 className="text-lg text-[#14213d] md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-center mt-1 lg:mt-2 2xl:mt-4 font-bold">
           Front-end developer and UI/UX Designer
         </h1>
         </motion.div>
@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
                 duration: 0.8,
                 delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01],
-            }} className="relative mt-2 sm:mt-4 w-[120px] h-64 sm:w-[150px] sm:h-80 lg:w-[200px] lg:h-[350px] xl:w-[250px] xl:h-[375px] 2xl:w-[288px] 2xl:h-[400px]">
+            }} className="relative mt-2 sm:mt-4 w-[120px] h-64 sm:w-[150px] sm:h-80 lg:w-[200px] lg:h-[350px] xl:w-[250px] xl:h-[375px] 2xl:w-[288px] 2xl:h-[500px]">
           <Image
             src="/images/walking.png"
             alt="Kevin Rakotovao FRONT-END DEVELOPER UI UX Designer"

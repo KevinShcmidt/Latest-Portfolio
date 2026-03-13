@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react";
 
 export default function Header(): ReactNode {
   const { theme } = useTheme();
-  const logoSrc = theme === "light" ? "/images/lightLogoMode.png" : "/images/logo.png";
+  const logoSrc = "/images/lightLogoMode.png";
   
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,13 +45,12 @@ export default function Header(): ReactNode {
 
   return (
     <header 
-      className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between transition-all duration-300 ease-in-out
-        ${scrolled 
-          ? "md:px-28 px-3 py-2 bg-opacity-85 backdrop-blur-3xl shadow-md" 
-          : "md:px-40 px-4 py-4 bg-opacity-0"
-        } 
-        ${theme === "light" ? "bg-white" : "bg-[#10002B]"}`
-      }
+    className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between transition-all duration-300 ease-in-out
+      ${scrolled 
+        ? "md:px-28 px-3 py-2 bg-white bg-opacity-85 backdrop-blur-3xl" 
+        : "md:px-40 px-4 py-4 bg-white "
+      } `
+    }
     >
       <a 
         href="#home" 
@@ -84,9 +83,9 @@ export default function Header(): ReactNode {
           aria-label="Toggle mobile menu"
         >
           {mobileMenuOpen ? (
-            <X size={24} className={`${theme === "light" ? "text-black" : "text-white"} transition-all duration-300`} />
+            <X size={24} className={`${theme === "light" ? "text-black" : "text-[#14213d]"} transition-all duration-300`} />
           ) : (
-            <Menu size={24} className={`${theme === "light" ? "text-black" : "text-white"} transition-all duration-300`} />
+            <Menu size={24} className={`${theme === "light" ? "text-black" : "text-[#14213d]"} transition-all duration-300`} />
           )}
         </button>
       </div>

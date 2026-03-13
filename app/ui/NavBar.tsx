@@ -70,7 +70,7 @@ export default function NavBar({ mobile = false, scrolled = false, onItemClick }
       <ul className={`
         font-medium list-none transition-all duration-300
         ${mobile 
-          ? "flex flex-col items-center justify-start gap-8 text-lg text-white pt-12 bg-violet-950" 
+          ? "flex flex-col items-center justify-start gap-8 text-lg text-white pt-12 bg-white" 
           : `flex items-center justify-center transition-all duration-300 ${
               scrolled ? "gap-10 text-xs" : "gap-16 text-sm"
             }`}
@@ -86,7 +86,7 @@ export default function NavBar({ mobile = false, scrolled = false, onItemClick }
               <a
                 href={href}
                 onClick={(e: React.MouseEvent<Element, MouseEvent>) => handleClick(href, e)}
-                className={`transition-colors duration-300 ease-in-out ${isActive ? "text-primary" : "hover:text-primary"}`}
+                className={`transition-colors text-[#000000] duration-300 ease-in-out ${isActive ? "text-primary" : "hover:text-primary"}`}
                 aria-label={label}
               >
                 {label}
@@ -98,6 +98,7 @@ export default function NavBar({ mobile = false, scrolled = false, onItemClick }
           );
         })}
       </ul>
+      
     </nav>
   );
 }
