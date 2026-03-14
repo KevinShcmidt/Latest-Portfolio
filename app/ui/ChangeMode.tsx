@@ -1,11 +1,9 @@
 "use client";
 
-import { Moon, Phone, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function ChangeMode() {
-  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);

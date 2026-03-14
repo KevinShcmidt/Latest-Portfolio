@@ -7,7 +7,7 @@ import { ArrowDownToLine } from "lucide-react";
 import * as motion from "motion/react-client";
 
 const handleDownload = () => {
-  const fileUrl = '/cv.pdf'; // ic
+  const fileUrl = '/Kevin_Rakotovao_CV.pdf'; // ic
   
   // Créer un lien temporaire
   const link = document.createElement('a');

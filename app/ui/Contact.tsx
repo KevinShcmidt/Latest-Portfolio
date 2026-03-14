@@ -36,7 +36,7 @@ export default function Contact(): JSX.Element {
         {/* Ligne déco au-dessus */}
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#E0A002]/60" />
-          <span className="text-[10px] font-bold tracking-widest uppercase text-[#E0A002]">Let's work together</span>
+          <span className="text-[10px] font-bold tracking-widest uppercase text-[#E0A002]">Let&apos;s work together</span>
           <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#E0A002]/60" />
         </div>
 

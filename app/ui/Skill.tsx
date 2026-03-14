@@ -118,7 +118,7 @@ export default function Skill(): JSX.Element {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mt-4 text-sm md:text-base text-center text-[#14213d]/70 max-w-2xl mx-auto leading-relaxed"
       >
-        As a front-end developer, I've built extensive knowledge across the stack —
+        As a front-end developer, I&apos;ve built extensive knowledge across the stack —
         from pixel-perfect UIs to mobile apps and backend fundamentals.
       </motion.p>
 

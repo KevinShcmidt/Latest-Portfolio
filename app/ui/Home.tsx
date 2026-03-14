@@ -24,7 +24,7 @@ export default function Home(): ReactNode {
           <span className="font-bold text-primary">KEVIN RAKOTOVAO</span>
         </p>
         <h1 className="text-lg text-[#14213d] md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-center mt-1 lg:mt-2 2xl:mt-4 font-bold">
-          Front-end developer and UI/UX Designer
+          Fullstack developer and UI/UX Designer
         </h1>
         </motion.div>
 

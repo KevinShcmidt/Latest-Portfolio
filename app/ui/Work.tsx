@@ -1,7 +1,6 @@
 "use client";
 import React, { JSX, useState } from "react";
 import * as motion from "motion/react-client";
-import { AnimatePresence } from "motion/react";
 import Title from "./Title";
 import Image from "next/image";
 import Link from "next/link";
