@@ -1,5 +1,6 @@
-import Image from "next/image";
+
 import React, { JSX } from "react";
+import Image from "next/image";
 import ButtonComponent from "./ButtonComponent";
 import SkewText from "./SkewText";
 import Title from "./Title";

@@ -1,11 +1,11 @@
 "use client";
 import React, { JSX } from "react";
 import ButtonComponent from "./ButtonComponent";
-import Image from "next/image";
 import ContactForm from "./ContactForm";
 import { ChevronDown, MapPin, Mail, Phone } from "lucide-react";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import * as motion from "motion/react-client";
+import Image from "next/image";
 
 export default function Contact(): JSX.Element {
   return (

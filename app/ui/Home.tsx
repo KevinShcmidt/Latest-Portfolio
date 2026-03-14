@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
 import * as motion from "motion/react-client";
 import React, { ReactNode } from "react";
 import ButtonComponent from "./ButtonComponent";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home(): ReactNode {

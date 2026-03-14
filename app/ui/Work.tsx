@@ -2,9 +2,9 @@
 import React, { JSX, useState } from "react";
 import * as motion from "motion/react-client";
 import Title from "./Title";
+import Modals from "./Modals";
 import Image from "next/image";
 import Link from "next/link";
-import Modals from "./Modals";
 
 // ── Types ──
 interface WorkItem {

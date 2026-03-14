@@ -1,7 +1,6 @@
 "use client";
 import React, { JSX } from "react";
 import Title from "./Title";
-import Image from "next/image";
 import * as motion from "motion/react-client";
 import { IconType } from "react-icons";
 import {
@@ -11,6 +10,7 @@ import {
   SiJavascript, SiTypescript, SiNextdotjs, SiTailwindcss,
   SiFlutter, SiDart, SiLaravel,
 } from "react-icons/si";
+import Image from "next/image";
 
 type Skill = {
   name: string;
@@ -213,12 +213,12 @@ export default function Skill(): JSX.Element {
         ))}
       </motion.div>
 
-      <style jsx>{`
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-      `}</style>
+      <style>{`
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+`}</style>
     </section>
   );
 }
