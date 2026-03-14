@@ -227,7 +227,11 @@ export default function Work(): JSX.Element {
     const endX = "changedTouches" in e ? e.changedTouches[0].clientX : e.clientX;
     const diff = dragStart.current - endX;
     if (Math.abs(diff) > 50) {
-      diff > 0 ? next() : prev();
+      if (diff > 0) {
+        next();
+      } else {
+        prev();
+      }
     }
   };
 
